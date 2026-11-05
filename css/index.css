@@ -53,7 +53,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     gap: 32px;
 }
 
@@ -103,8 +103,8 @@ header nav a:hover {
 }
 
 .hero-content p {
-    color: #625873;
-    font-size: 16px;
+    color: black;
+    font-size: 18px;
     max-width: 440px;
     margin-bottom: 25px;
 }
