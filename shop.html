@@ -13,28 +13,28 @@
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div>
+    <header class="header">
+        <div class="logo">
             <i class="fa-solid fa-paw"></i>
             <h1>PAWFECT</h1>
         </div>
 
-        <nav>
+        <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
+            <a href="shop.html" class="active">Shop</a>
             <a href="index.html#about">About Us</a>
         </nav>
 
-        <div>
-            <a href="cart.html" aria-label="Shopping cart">
+        <div class="header-icons">
+            <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span>0</span>
+                <span id="cart-count">0</span>
             </a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section>
+    <section class="shop-hero">
         <div>
             <h2>Find Everything Your Pet Needs</h2>
             <p>
@@ -44,36 +44,37 @@
         </div>
     </section>
 
-    <main>
+    <main class="shop-container">
 
         <!-- SEARCH SECTION -->
-        <section>
-            <div>
+        <section class="search-section">
+            <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input
                     type="search"
+                    id="search-input"
                     placeholder="Search for pet food, toys, accessories..."
                     aria-label="Search products"
                 >
-                <button type="button">
+                <button type="button" id="search-button">
                     Search
                 </button>
             </div>
         </section>
 
-        <div>
+        <div class="shop-layout">
 
             <!-- FILTER SIDEBAR -->
-            <aside>
-                <div>
+            <aside class="filter-sidebar">
+                <div class="filter-heading">
                     <h3>Filters</h3>
-                    <button type="reset">
+                    <button type="reset" id="clear-filters">
                         Clear All
                     </button>
                 </div>
 
                 <!-- PET TYPE FILTER -->
-                <div>
+                <div class="filter-group">
                     <h4>Shop By Pet</h4>
                     <label>
                         <input type="checkbox" name="pet" value="dog">
@@ -98,7 +99,7 @@
                 </div>
 
                 <!-- PRODUCT CATEGORY FILTER -->
-                <div>
+                <div class="filter-group">
                     <h4>Product Category</h4>
                     <label>
                         <input type="checkbox" name="category" value="food">
@@ -123,7 +124,7 @@
                 </div>
 
                 <!-- PRICE FILTER -->
-                <div>
+                <div class="filter-group">
                     <h4>Price Range</h4>
                     <label>
                         <input type="radio" name="price" value="all" checked>
@@ -148,7 +149,7 @@
                 </div>
 
                 <!-- AGE FILTER -->
-                <div>
+                <div class="filter-group">
                     <h4>Pet Age</h4>
                     <label>
                         <input type="checkbox" name="age" value="young">
@@ -170,14 +171,14 @@
             </aside>
 
             <!-- PRODUCT DISPLAY -->
-            <section>
-                <div>
+            <section class="products-section">
+                <div class="products-heading">
                     <div>
                         <h2>Our Products</h2>
                         <p>Find the perfect products for your pets.</p>
                     </div>
 
-                    <div>
+                    <div class="sort-section">
                         <label for="sort-products">Sort By:</label>
                         <select id="sort-products">
                             <option value="default">Featured</option>
@@ -188,10 +189,11 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="product-grid" id="product-grid">
 
                     <!-- PRODUCT 1 -->
                     <article
+                        class="product-card"
                         data-id="1"
                         data-name="Premium Puppy Food"
                         data-pet="dog"
@@ -199,25 +201,25 @@
                         data-price="1800"
                         data-age="young"
                     >
-                        <div>
-                            <span>Best Seller</span>
+                        <div class="product-image">
+                            <span class="product-badge">Best Seller</span>
                             <img
                                 src="images/puppyfood1.jpg"
                                 alt="Premium puppy food"
                             >
-                            <button type="button" aria-label="Add to wishlist">
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
 
-                        <div>
-                            <span>Dog Food</span>
+                        <div class="product-info">
+                            <span class="product-category">Dog Food</span>
                             <h3>Premium Puppy Food</h3>
                             <p>Nutritious food for growing puppies.</p>
-                            <div>
+                            <div class="product-price">
                                 <strong>KES 1,800</strong>
                             </div>
-                            <button type="button">
+                            <button class="add-cart-btn" type="button">
                                 <i class="fa-solid fa-cart-plus"></i>
                                 Add to Cart
                             </button>
@@ -226,6 +228,7 @@
 
                     <!-- PRODUCT 2 -->
                     <article
+                        class="product-card"
                         data-id="2"
                         data-name="Adult Cat Food"
                         data-pet="cat"
@@ -233,24 +236,24 @@
                         data-price="1400"
                         data-age="adult"
                     >
-                        <div>
+                        <div class="product-image">
                             <img
                                 src="images/catfood1.jpg"
                                 alt="Adult cat food"
                             >
-                            <button type="button" aria-label="Add to wishlist">
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
 
-                        <div>
-                            <span>Cat Food</span>
+                        <div class="product-info">
+                            <span class="product-category">Cat Food</span>
                             <h3>Adult Cat Food</h3>
                             <p>Balanced everyday nutrition for adult cats.</p>
-                            <div>
+                            <div class="product-price">
                                 <strong>KES 1,400</strong>
                             </div>
-                            <button type="button">
+                            <button class="add-cart-btn" type="button">
                                 <i class="fa-solid fa-cart-plus"></i>
                                 Add to Cart
                             </button>
@@ -259,6 +262,7 @@
 
                     <!-- PRODUCT 3 -->
                     <article
+                        class="product-card"
                         data-id="3"
                         data-name="Interactive Dog Toy"
                         data-pet="dog"
@@ -266,24 +270,24 @@
                         data-price="850"
                         data-age="all-ages"
                     >
-                        <div>
+                        <div class="product-image">
                             <img
                                 src="images/toy1.jpg"
                                 alt="Interactive dog toy"
                             >
-                            <button type="button" aria-label="Add to wishlist">
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
 
-                        <div>
-                            <span>Dog Toys</span>
+                        <div class="product-info">
+                            <span class="product-category">Dog Toys</span>
                             <h3>Interactive Dog Toy</h3>
                             <p>A fun toy to keep your dog entertained.</p>
-                            <div>
+                            <div class="product-price">
                                 <strong>KES 850</strong>
                             </div>
-                            <button type="button">
+                            <button class="add-cart-btn" type="button">
                                 <i class="fa-solid fa-cart-plus"></i>
                                 Add to Cart
                             </button>
@@ -292,6 +296,7 @@
 
                     <!-- PRODUCT 4 -->
                     <article
+                        class="product-card"
                         data-id="4"
                         data-name="Bird Seed Mix"
                         data-pet="bird"
@@ -299,24 +304,24 @@
                         data-price="650"
                         data-age="all-ages"
                     >
-                        <div>
+                        <div class="product-image">
                             <img
                                 src="images/birdfood1.jpg"
                                 alt="Bird seed mix"
                             >
-                            <button type="button" aria-label="Add to wishlist">
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
 
-                        <div>
-                            <span>Bird Food</span>
+                        <div class="product-info">
+                            <span class="product-category">Bird Food</span>
                             <h3>Bird Seed Mix</h3>
                             <p>A seed mix for pet birds.</p>
-                            <div>
+                            <div class="product-price">
                                 <strong>KES 2150</strong>
                             </div>
-                            <button type="button">
+                            <button class="add-cart-btn" type="button">
                                 <i class="fa-solid fa-cart-plus"></i>
                                 Add to Cart
                             </button>
@@ -325,6 +330,7 @@
 
                     <!-- PRODUCT 5 -->
                     <article
+                        class="product-card"
                         data-id="5"
                         data-name="Comfortable Pet Bed"
                         data-pet="dog"
@@ -332,24 +338,24 @@
                         data-price="3200"
                         data-age="all-ages"
                     >
-                        <div>
+                        <div class="product-image">
                             <img
                                 src="images/bed1.jpg"
                                 alt="Comfortable pet bed"
                             >
-                            <button type="button" aria-label="Add to wishlist">
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
 
-                        <div>
-                            <span>Pet Beds</span>
+                        <div class="product-info">
+                            <span class="product-category">Pet Beds</span>
                             <h3>Comfortable Pet Bed</h3>
                             <p>A soft resting space for your pet.</p>
-                            <div>
+                            <div class="product-price">
                                 <strong>KES 3,200</strong>
                             </div>
-                            <button type="button">
+                            <button class="add-cart-btn" type="button">
                                 <i class="fa-solid fa-cart-plus"></i>
                                 Add to Cart
                             </button>
@@ -358,6 +364,7 @@
 
                     <!-- PRODUCT 6 -->
                     <article
+                        class="product-card"
                         data-id="6"
                         data-name="Hamster Exercise Wheel"
                         data-pet="small-pet"
@@ -365,24 +372,24 @@
                         data-price="1100"
                         data-age="all-ages"
                     >
-                        <div>
+                        <div class="product-image">
                             <img
                                 src="images/hamsterwheel.jpg"
                                 alt="Hamster exercise wheel"
                             >
-                            <button type="button" aria-label="Add to wishlist">
+                            <button class="wishlist-btn" type="button" aria-label="Add to wishlist">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         </div>
 
-                        <div>
-                            <span>Small Pet Toys</span>
+                        <div class="product-info">
+                            <span class="product-category">Small Pet Toys</span>
                             <h3>Hamster Exercise Wheel</h3>
                             <p>An exercise wheel for pet hamsters.</p>
-                            <div>
+                            <div class="product-price">
                                 <strong>KES 1,100</strong>
                             </div>
-                            <button type="button">
+                            <button class="add-cart-btn" type="button">
                                 <i class="fa-solid fa-cart-plus"></i>
                                 Add to Cart
                             </button>
@@ -392,7 +399,7 @@
                 </div>
 
                 <!-- NO PRODUCTS MESSAGE -->
-                <p hidden>
+                <p id="no-products" hidden>
                     No products found. Try changing your search or filters.
                 </p>
 
@@ -403,13 +410,13 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div>
+    <footer class="footer">
+        <div class="footer-brand">
             <h2>PAWFECT</h2>
             <p>Shop Happy. Pets Happy.</p>
         </div>
 
-        <div>
+        <div class="footer-socials">
             <a href="#" aria-label="Facebook">
                 <i class="fa-brands fa-facebook"></i>
             </a>
@@ -418,7 +425,7 @@
             </a>
         </div>
 
-        <div>
+        <div class="footer-bottom">
             <p>&copy; 2026 Pawfect. All rights reserved.</p>
             <p>Contact: 0712 345 678</p>
         </div>
