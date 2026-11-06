@@ -65,7 +65,8 @@ header nav a {
     transition: 0.3s ease;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:active {
     color: #9B5DE5;
 }
 
