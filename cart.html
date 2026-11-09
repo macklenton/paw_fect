@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAWFECT</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/cart.js" defer></script>
+  </head>
+  <body>
+    
+    <header>
+      <div>        
+        <h1>
+            <i class="fa-solid fa-paw"></i>
+            PAWFECT</h1>
+      </div>
+      <div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about">About Us</a>
+        </nav>
+      </div>
+      <div class="header-icons">
+            <a href="cart.html" class="cart-icon active">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+
+    </header>
+    <section class="hero-section">
+        <h1> My Shopping Cart</h1>
+        <p> Almost there. Your pets are waiting for their goodies</p>
+    </section>
+    
+<section class="cart-items" id="cart-items">
+
+    
+
+</section>
+<h2> Your Cart (<span id="cart-item-count">0</span> Items)</h2>
+
+
+<!-- Empty cart message -->
+<section class="empty-cart" id="empty-cart" hidden >
+
+    <div class="empty-cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <p>You haven't added anything to your cart yet.</p>
+
+    <a href="shop.html" class="shop-now-btn">
+        Start Shopping
+    </a>
+
+</section>
+
+
+<strong id="cart-subtotal">KES 0</strong>
+<strong id="delivery-fee">KES 0</strong>
+<strong id="cart-total">KES 0</strong>
+
+
+
+  </body>
+  </html>

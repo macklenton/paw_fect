@@ -11,6 +11,49 @@ const priceFilters = document.querySelectorAll('input[name="price"]');
 const ageFilters = document.querySelectorAll('input[name="age"]');
 const  clearFilters = document.querySelector("#clear-filters");
 const wishlistButton = document.querySelectorAll(".wishlist-btn");
+const addCartButton = document.querySelectorAll(".add-cart-btn");
+
+function addToCart(){
+    addCartButton.forEach((button) =>{
+        button.addEventListener("click", ()=>{
+            // window.location.href = "cart.html"
+           
+            
+            const productCard = button.closest(".product-card");
+            
+            const itemName = productCard.dataset.name;
+            const itemId = productCard.dataset.id;
+            const itemPrice = productCard.dataset.price
+            const itemImage = productCard.querySelector("img").src;
+
+
+             const cartItem = {
+                id : itemId,
+                name : itemName,
+                price : itemPrice,
+                image : itemImage,
+                quantity : 1
+            }
+             const cart = JSON.parse(localStorage.getItem("pawfectCart")) || [];
+
+            const existingProduct = cart.find((item) => item.id === cartItem.id);
+            if(existingProduct){
+                existingProduct.quantity += 1;
+            }else{
+
+                cart.push(cartItem);
+            }
+            
+           
+            localStorage.setItem("pawfectCart", JSON.stringify(cart))
+            
+            console.log(productCard )
+            console.log(itemImage)
+        })
+    })
+}
+addToCart()
+
 
 console.log(productCards);
 console.log(productCards.length)
@@ -213,7 +256,6 @@ function wishlistbtn(){
             button.classList.toggle("active")
             console.log(button.classList.contains("active"));
         })
-        
     })
     
 }
