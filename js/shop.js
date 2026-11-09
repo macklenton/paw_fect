@@ -10,7 +10,7 @@ const categoryFilters = document.querySelectorAll('input[name="category"]');
 const priceFilters = document.querySelectorAll('input[name="price"]');
 const ageFilters = document.querySelectorAll('input[name="age"]');
 const  clearFilters = document.querySelector("#clear-filters");
-
+const wishlistButton = document.querySelectorAll(".wishlist-btn");
 
 console.log(productCards);
 console.log(productCards.length)
@@ -206,3 +206,15 @@ function filterClear(product){
     });
 }
 filterClear()
+// WISHLIST BUTTON 
+function wishlistbtn(){
+    wishlistButton.forEach((button) =>{
+        button.addEventListener("click", ()=>{
+            button.classList.toggle("active")
+            console.log(button.classList.contains("active"));
+        })
+        
+    })
+    
+}
+wishlistbtn()

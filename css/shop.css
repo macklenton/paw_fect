@@ -399,7 +399,15 @@ select {
     background-color: #6D28D9;
     color: #FFFFFF;
 }
+.wishlist-btn.active{
+    background-color: #6D28D9;
+    color: #FFFFFF;
+}
 
+.wishlist-btn.active i {
+
+    color:#FFFFFF;
+}
 /* PRODUCT INFO */
 
 .product-info {
