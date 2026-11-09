@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | PAWFECT</title>
+
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <script src="js/product.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">PAWFECT</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="index.html#about">About US</a>
+            
+        </nav>
+
+        <a href="cart.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+        </a>
+    </header>
+
+    <main class="product-container">
+
+        
+
+        <section class="product-details" id="product-details">
+
+            <div class="product-image">
+                <img id="product-image" src="" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <span id="product-category" class="product-category"></span>
+
+                <h1 id="product-name"></h1>
+
+                <p id="product-description"></p>
+
+                <h2 id="product-price"></h2>
+
+                <div class="product-meta">
+                    <p><strong>Pet:</strong> <span id="product-pet"></span></p>
+                    <p><strong>Suitable Age:</strong> <span id="product-age"></span></p>
+                </div>
+
+                <div class="quantity-control">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+
+                <button id="buy-now" class="buy-now-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    Buy Now
+                </button>
+
+            </div>
+
+        </section>
+
+        <p id="product-not-found" hidden>
+            Sorry, this product could not be found.
+            <a href="shop.html">Return to shop</a>
+        </p>
+
+    </main>
+
+</body>
+</html>
