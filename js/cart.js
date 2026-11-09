@@ -57,3 +57,35 @@ function displayCart(){
     }
 }
 displayCart()
+
+
+function updateCartCount(){
+    const countBadge = document.querySelector("#cart-count");
+    const cartItemsCount = document.querySelector("#cart-item-count")
+   
+    const totalItems = cart.reduce((total, item)=>{
+       
+        return total + item.quantity;
+    }, 0)
+    countBadge.textContent = totalItems;
+     
+
+    cartItemsCount.textContent = totalItems;
+
+    
+
+}
+updateCartCount()
+
+
+function updateCartTotal(){
+     const cartTotal = document.querySelector("#cart-subtotal")
+     const totalAmount = cart.reduce((total, item) =>{
+        const amount = Number(item.price) * item.quantity
+        return total + amount
+     },0)
+     cartTotal.textContent = `Total amount: ${totalAmount} Ksh`;
+     
+
+}
+updateCartTotal()

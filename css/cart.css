@@ -101,6 +101,7 @@ header nav a:active {
 .hero-section {
     min-height: 200px;
     display: block;
+    
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 35px;
@@ -113,12 +114,14 @@ header nav a:active {
     text-align: left;
     font-size: 48px;
     line-height: 1.2;
+    margin: 25px;
     color: #351078;
     margin-bottom: 5px;
 }
 .hero-section p{
     color: black;
     font-size: 18px;
+    margin: 25px;
     max-width: 440px;
     margin-bottom: 25px;
 }
@@ -270,12 +273,6 @@ header nav a:active {
     color: #777184;
     font-size: 14px;
 }
-
-
-/* ========================================
-   7. QUANTITY CONTROLS
-   For the next JavaScript development stage
-======================================== */
 
 .cart-item-actions {
     display: flex;
@@ -480,7 +477,23 @@ header nav a:active {
 .shop-now-btn:hover {
     background-color: #351078;
 }
+.item-count{
+    min-height: 150px;
+    margin: 25px;
+    line-height: 2;
+}
+#cart-item-count {
+    font-size: 14px;
+    color: #777184;
+    min-height: 200px;
+    font-weight: 500;
+}
 
+#cart-subtotal {
+    font-size: 18px;
+    color: #351078;
+    font-weight: 700;
+}
 
 /* ========================================
    10. FOOTER
