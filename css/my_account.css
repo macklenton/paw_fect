@@ -189,3 +189,57 @@ header {
     background-color: #F8F5FF;
     border-radius: 8px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .account-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .account-welcome {
+        padding: 28px;
+    }
+
+    .account-section {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .account-welcome h2 {
+        font-size: 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .wishlist-products {
+        grid-template-columns: 1fr;
+    }
+}
