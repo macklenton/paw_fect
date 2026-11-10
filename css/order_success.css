@@ -300,3 +300,69 @@ header nav a:hover {
     background-color: #DCC0FA;
 }
 
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    header nav {
+        gap: 15px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    .success-container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .success-message {
+        padding: 30px 18px;
+    }
+
+    .success-message h1 {
+        font-size: 23px;
+    }
+
+    .order-details,
+    .customer-information,
+    .order-total {
+        padding: 18px;
+    }
+
+    .information-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .purchased-item {
+        gap: 12px;
+    }
+
+    .purchased-item img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .purchased-item-details h3 {
+        font-size: 13px;
+    }
+
+    .purchased-item > strong {
+        font-size: 12px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+}
