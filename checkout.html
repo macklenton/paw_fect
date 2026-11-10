@@ -10,17 +10,143 @@
 </head>
 <body>
 
-    <header class="checkout-header">
-        <h1>PAWFECT</h1>
-        <p>Secure Checkout</p>
+    <header>
+      <div>
+        <h1>
+          <i class="fa-solid fa-paw"></i>
+          PAWFECT
+        </h1>
+      </div>
+      <div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about">About Us</a>
+        </nav>
+      </div>
     </header>
 
     <main class="checkout-container">
 
-        <section class="customer-details">
-            <h2>Delivery Information</h2>
+        
+<section class="customer-details">
+    <h2>Delivery Information</h2>
 
-        </section>
+    <form class="checkout-form" id="checkout-form">
+
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input
+                type="text"
+                id="full-name"
+                name="fullName"
+                placeholder="Enter your full name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. 0712345678"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="county">County</label>
+            <select id="county" name="county" required>
+                <option value="">Select your county</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Kiambu">Kiambu</option>
+                <option value="Machakos">Machakos</option>
+                <option value="Kajiado">Kajiado</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Mombasa">Mombasa</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="town">Town / Estate</label>
+            <input
+                type="text"
+                id="town"
+                name="town"
+                placeholder="Enter your town or estate"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <textarea
+                id="address"
+                name="address"
+                placeholder="Enter your specific delivery location"
+                required
+            ></textarea>
+        </div>
+
+    
+<div class="payment-methods">
+
+    <h3>Payment Method</h3>
+
+    <label class="payment-option">
+        <input
+            type="radio"
+            name="paymentMethod"
+            value="mpesa"
+            required
+        >
+        <span>M-Pesa</span>
+    </label>
+
+    <label class="payment-option">
+        <input
+            type="radio"
+            name="paymentMethod"
+            value="cod"
+        >
+        <span>Cash on Delivery</span>
+    </label>
+
+    <div class="form-group" id="mpesa-details" hidden>
+        <label for="mpesa-number">M-Pesa Phone Number</label>
+        <input
+            type="tel"
+            id="mpesa-number"
+            name="mpesaNumber"
+            placeholder="e.g. 0712345678"
+        >
+    </div>
+
+    <button type="submit" class="place-order-btn">
+        Place Order
+    </button>
+
+</div>
+</form>
+
+
+</section>
+
 
         <section class="order-summary">
             <h2>Your Order</h2>

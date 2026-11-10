@@ -242,7 +242,7 @@ function wishlistbtn(){
 wishlistbtn()
 
 //ADD TO CART FUNCTION
-
+const cart = JSON.parse(localStorage.getItem("pawfectCart")) || [];
 function addToCart(){
     addCartButton.forEach((button) =>{
         button.addEventListener("click", ()=>{
@@ -264,7 +264,7 @@ function addToCart(){
                 image : itemImage,
                 quantity : 1
             }
-             const cart = JSON.parse(localStorage.getItem("pawfectCart")) || [];
+             
 
             const existingProduct = cart.find((item) => item.id === cartItem.id);
             if(existingProduct){
@@ -276,6 +276,7 @@ function addToCart(){
             
            
             localStorage.setItem("pawfectCart", JSON.stringify(cart))
+            updateCartCount()
             
             console.log(productCard )
             console.log(itemImage)
@@ -306,3 +307,12 @@ function openProductDetails() {
 
 openProductDetails();
 applyFilters();
+
+function updateCartCount() {
+    const totalItems = cart.reduce((total, item) => {
+        return total + item.quantity;
+    }, 0);
+
+    cartCount.textContent = totalItems;
+}
+

@@ -1,7 +1,4 @@
-
-/* ========================================
-   1. GENERAL STYLING
-======================================== */
+/* General Styling */
 
 * {
     margin: 0;
@@ -25,9 +22,7 @@ button {
 }
 
 
-/* ========================================
-   2. HEADER
-======================================== */
+/* Header */
 
 header {
     width: 100%;
@@ -54,7 +49,6 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 32px;
 }
 
@@ -70,7 +64,6 @@ header nav a:hover,
 header nav a:active {
     color: #9B5DE5;
 }
-
 
 .header-icons {
     display: flex;
@@ -97,11 +90,13 @@ header nav a:active {
     align-items: center;
     justify-content: center;
 }
-/*HERO SECTION*/
+
+
+/* Hero Section */
+
 .hero-section {
     min-height: 200px;
     display: block;
-    
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 35px;
@@ -110,6 +105,7 @@ header nav a:active {
     padding-bottom: 55px;
     overflow: hidden;
 }
+
 .hero-section h1 {
     text-align: left;
     font-size: 48px;
@@ -118,16 +114,17 @@ header nav a:active {
     color: #351078;
     margin-bottom: 5px;
 }
-.hero-section p{
+
+.hero-section p {
     color: black;
     font-size: 18px;
     margin: 25px;
     max-width: 440px;
     margin-bottom: 25px;
 }
-/* ========================================
-   3. CART HERO
-======================================== */
+
+
+/* Cart Hero */
 
 .cart-hero {
     padding: 55px 20px;
@@ -147,13 +144,14 @@ header nav a:active {
 }
 
 
-/* CART CONTENT */
+/* Cart Content */
 
 .cart-content {
     min-width: 0;
 }
 
-/* CART HEADING ITEM COUNT */
+
+/* Cart Heading Item Count */
 
 .cart-heading h2 span {
     font-size: 15px;
@@ -161,9 +159,8 @@ header nav a:active {
     color: #898197;
 }
 
-/* ========================================
-   4. MAIN CART CONTAINER
-======================================== */
+
+/* Main Cart Container */
 
 .cart-container {
     width: 86%;
@@ -199,9 +196,7 @@ header nav a:active {
 }
 
 
-/* ========================================
-   5. CART LAYOUT
-======================================== */
+/* Cart Layout */
 
 .cart-layout {
     display: grid;
@@ -217,9 +212,7 @@ header nav a:active {
 }
 
 
-/* ========================================
-   6. DYNAMIC CART PRODUCT CARDS
-======================================== */
+/* Dynamic Cart Product Cards */
 
 .cart-card {
     width: 100%;
@@ -326,9 +319,7 @@ header nav a:active {
 }
 
 
-/* ========================================
-   8. ORDER SUMMARY
-======================================== */
+/* Order Summary */
 
 .order-summary {
     position: sticky;
@@ -424,9 +415,7 @@ header nav a:active {
 }
 
 
-/* ========================================
-   9. EMPTY CART
-======================================== */
+/* Empty Cart */
 
 .empty-cart {
     padding: 60px 20px;
@@ -477,11 +466,13 @@ header nav a:active {
 .shop-now-btn:hover {
     background-color: #351078;
 }
-.item-count{
+
+.item-count {
     min-height: 150px;
     margin: 25px;
     line-height: 2;
 }
+
 #cart-item-count {
     font-size: 14px;
     color: #777184;
@@ -495,9 +486,8 @@ header nav a:active {
     font-weight: 700;
 }
 
-/* ========================================
-   10. FOOTER
-======================================== */
+
+/* Footer */
 
 .footer {
     padding: 40px 7% 20px;
@@ -545,9 +535,7 @@ header nav a:active {
 }
 
 
-/* ========================================
-   11. RESPONSIVE DESIGN
-======================================== */
+/* Responsive Design */
 
 @media (max-width: 950px) {
 
