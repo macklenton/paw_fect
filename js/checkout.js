@@ -52,6 +52,8 @@ function displayCheckoutItems(){
 }displayCheckoutItems()
 
 
+// SUBTOTAL CALCULATION
+
 function subtotalCalculation(){
     const subtotalAmount = cart.reduce((total, item) =>{
         const amount = Number(item.price) * item.quantity;
@@ -63,6 +65,8 @@ function subtotalCalculation(){
 subtotalCalculation()
 const selectedCounty = document.querySelector("#county");
 
+
+// DELIVERY FEE CALCULATION
 function calculateDeliveryFee() {
     let deliveryFee;
 
@@ -83,7 +87,7 @@ selectedCounty.addEventListener("change", () => {
     calculateTotalAmount();
 });
 
-
+// TOTAL AMOUNT CALCULATION
 function calculateTotalAmount(){
     const subtotalAmount = subtotalCalculation();
     const deliveryFee = calculateDeliveryFee();
@@ -94,7 +98,7 @@ function calculateTotalAmount(){
 calculateTotalAmount()
 
 const mpesaNumber = document.querySelector("#mpesa-number");
-
+//PAYMENT METHOD
 function paymentCheckoutMethod() {
     paymentMethods.forEach((method) => {
         method.addEventListener("change", () => {
@@ -114,3 +118,61 @@ function paymentCheckoutMethod() {
 }
 
 paymentCheckoutMethod();
+
+
+checkoutForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // 1. Check whether the cart is empty
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add products before checkout.");
+        return;
+    }
+
+    // 2. Collect customer information
+    const formData = new FormData(checkoutForm);
+
+    const customerName = formData.get("fullName");
+    const customerNumber = formData.get("phone");
+    const customerEmail = formData.get("email");
+    const paymentMethod = formData.get("paymentMethod");
+    const mpesaNumber = formData.get("mpesaNumber") || "";
+
+    
+    const orderTotal = subtotalCalculation() + calculateDeliveryFee();
+
+    //  Generate an order ID
+    const orderId = `PAW-${Date.now()}`;
+
+    // Create the order object
+    const order = {
+        orderId,
+        customerName,
+        customerEmail,
+        customerNumber,
+        paymentMethod,
+        mpesaNumber,
+        orderTotal,
+        items: cart,
+        orderDate: new Date().toLocaleString(),
+        status: "Pending"
+    };
+
+    const savedOrders = JSON.parse(localStorage.getItem("pawfectOrders")) || [];
+
+    savedOrders.push(order);
+
+    
+    localStorage.setItem("pawfectOrders", JSON.stringify(savedOrders));
+
+    // Clear the shopping cart
+    localStorage.removeItem("pawfectCart");
+
+    // 10. Confirm the order
+    alert(
+        `Order placed successfully!\n\nOrder ID: ${orderId}\nTotal: KES ${orderTotal.toLocaleString("en-KE")}\nPayment: ${paymentMethod === "mpesa" ? "M-Pesa" : "Cash on Delivery"}`
+    );
+
+    // 11. Refresh the checkout page
+    window.location.reload();
+});
