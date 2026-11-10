@@ -39,5 +39,5 @@ loginForm.addEventListener("submit", (event) => {
     alert("Login successful! Welcome back.");
 
 
-    window.location.href = "shop.html";
+    window.location.href = "my_account.html";
 });

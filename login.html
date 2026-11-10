@@ -12,17 +12,24 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     >
+    <script src="js/logout.js" defer></script>
 </head>
 <body>
 
     <header>
-        <h1><i class="fa-solid fa-paw"></i>
-            PAWFECT</h1>
+        <div class="logo">
+            
+            <h1><i class="fa-solid fa-paw"></i>
+                PAWFECT</h1>
+        </div>
 
-        <nav>
+        <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
+            <a href="shop.html" class="active">Shop</a>
             <a href="signup.html">Create Account</a>
+            <a href="#" id="logout-link">Logout</a>
+            <a href="my_account.html">Dashboard
+            </a>
         </nav>
     </header>
 
