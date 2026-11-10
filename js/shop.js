@@ -230,16 +230,93 @@ function filterClear(product){
 }
 filterClear()
 // WISHLIST BUTTON 
-function wishlistbtn(){
-    wishlistButton.forEach((button) =>{
-        button.addEventListener("click", ()=>{
-            button.classList.toggle("active")
-            console.log(button.classList.contains("active"));
-        })
-    })
-    
+
+// WISHLIST BUTTON
+function wishlistbtn() {
+
+    const currentUser = JSON.parse(
+        localStorage.getItem("pawfectCurrentUser")
+    );
+
+    // Create a separate wishlist for each customer
+    const wishlistKey = currentUser
+        ? `pawfectWishlist_${currentUser.email}`
+        : null;
+
+    const wishlist = currentUser
+        ? JSON.parse(localStorage.getItem(wishlistKey)) || []
+        : [];
+
+    wishlistButton.forEach((button) => {
+
+        const productCard = button.closest(".product-card");
+        const productId = productCard.dataset.id;
+
+        // Display saved wishlist products
+        const isSaved = wishlist.some((item) => {
+            return item.id === productId;
+        });
+
+        if (isSaved) {
+            button.classList.add("active");
+        }
+
+        button.addEventListener("click", () => {
+
+            // Require login
+            if (!currentUser) {
+                alert("Please login to save wishlist products.");
+                window.location.href = "login.html";
+                return;
+            }
+
+            const currentWishlist = JSON.parse(
+                localStorage.getItem(wishlistKey)
+            ) || [];
+
+            const existingProduct = currentWishlist.find((item) => {
+                return item.id === productId;
+            });
+
+            if (existingProduct) {
+
+                // Remove product
+                const updatedWishlist = currentWishlist.filter((item) => {
+                    return item.id !== productId;
+                });
+
+                localStorage.setItem(
+                    wishlistKey,
+                    JSON.stringify(updatedWishlist)
+                );
+
+                button.classList.remove("active");
+
+            } else {
+
+                // Add product
+                const wishlistItem = {
+                    id: productId,
+                    name: productCard.dataset.name,
+                    price: Number(productCard.dataset.price),
+                    image: productCard.querySelector("img").src
+                };
+
+                currentWishlist.push(wishlistItem);
+
+                localStorage.setItem(
+                    wishlistKey,
+                    JSON.stringify(currentWishlist)
+                );
+
+                button.classList.add("active");
+            }
+        });
+    });
 }
-wishlistbtn()
+
+wishlistbtn();
+
 
 //ADD TO CART FUNCTION
 const cart = JSON.parse(localStorage.getItem("pawfectCart")) || [];
