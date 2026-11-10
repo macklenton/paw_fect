@@ -136,7 +136,7 @@ PAWFECT/
 
 Download or clone the repository and open:
 
-`index.html`
+`https://github.com/macklenton/paw_fect`
 
 in a web browser.
 
@@ -152,7 +152,7 @@ The website will open in your default browser.
 
 **GitHub Repository:**
 
-`YOUR_GITHUB_REPOSITORY_URL`
+`https://github.com/macklenton/paw_fect`
 
 **Live Website:**
 
