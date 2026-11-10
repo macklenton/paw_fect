@@ -4,7 +4,7 @@ const subtotalElement = document.querySelector("#subtotal");
 const deliveryFeeElement = document.querySelector("#delivery-fee");
 const totalElement = document.querySelector("#total");
 const mpesaDetails = document.querySelector("#mpesa-details");
-
+const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
 
 const cart = JSON.parse(localStorage.getItem("pawfectCart")) || [];
 
@@ -50,3 +50,67 @@ function displayCheckoutItems(){
         })
     }
 }displayCheckoutItems()
+
+
+function subtotalCalculation(){
+    const subtotalAmount = cart.reduce((total, item) =>{
+        const amount = Number(item.price) * item.quantity;
+        return total + amount
+    },0)
+    subtotalElement.textContent = `KES ${subtotalAmount.toLocaleString("en-KE")}`;
+    return subtotalAmount;
+}
+subtotalCalculation()
+const selectedCounty = document.querySelector("#county");
+
+function calculateDeliveryFee() {
+    let deliveryFee;
+
+    if (selectedCounty.value === "") {
+        deliveryFee = 0;
+    } else if (selectedCounty.value === "Nairobi") {
+        deliveryFee = 400;
+    } else {
+        deliveryFee = 600;
+    }
+
+    deliveryFeeElement.textContent = `KES ${deliveryFee.toLocaleString("en-KE")}`;
+
+    return deliveryFee;
+}
+
+selectedCounty.addEventListener("change", () => {
+    calculateTotalAmount();
+});
+
+
+function calculateTotalAmount(){
+    const subtotalAmount = subtotalCalculation();
+    const deliveryFee = calculateDeliveryFee();
+
+    const total = subtotalAmount + deliveryFee
+    totalElement.textContent = `KES ${total.toLocaleString("en-KE")}`
+}
+calculateTotalAmount()
+
+const mpesaNumber = document.querySelector("#mpesa-number");
+
+function paymentCheckoutMethod() {
+    paymentMethods.forEach((method) => {
+        method.addEventListener("change", () => {
+
+            if (method.value === "mpesa") {
+                mpesaDetails.hidden = false;
+                mpesaNumber.required = true;
+
+            } else {
+                mpesaDetails.hidden = true;
+                mpesaNumber.required = false;
+                mpesaNumber.value = "";
+            }
+
+        });
+    });
+}
+
+paymentCheckoutMethod();

@@ -252,6 +252,10 @@ header nav a:active {
     background-color: #351078;
 }
 
+/* HIDE MPESA*/
+#mpesa-details[hidden] {
+    display: none !important;
+}
 /* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
     .checkout-container {
