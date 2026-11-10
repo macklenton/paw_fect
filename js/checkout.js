@@ -163,15 +163,13 @@ checkoutForm.addEventListener("submit", (event) => {
 
     
     localStorage.setItem("pawfectOrders", JSON.stringify(savedOrders));
+     
 
-    // Clear the shopping cart
+    window.location.href = "order_success.html"
+
+    //CLEAR CART
     localStorage.removeItem("pawfectCart");
 
-    // Confirm the order
-    alert(
-        `Order placed successfully!\n\nOrder ID: ${orderId}\nTotal: KES ${orderTotal.toLocaleString("en-KE")}\nPayment: ${paymentMethod === "mpesa" ? "M-Pesa" : "Cash on Delivery"}`
-    );
+    
 
-    // Refresh the checkout page
-    window.location.reload();
 });
