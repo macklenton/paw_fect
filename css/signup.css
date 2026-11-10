@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F5FF;
+    color: #25213A;
+}
+
+/* Header */
+header {
+    background-color: #FFFFFF;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    color: #6D28D9;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #25213A;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #6D28D9;
+}
+
+
+.signup-container {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Signup Form Section */
+.signup-form-section {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(53, 16, 120, 0.08);
+}
+
+.signup-form-section h2 {
+    text-align: center;
+    font-size: 27px;
+    color: #351078;
+    margin-bottom: 10px;
+}
+
+.signup-form-section  p {
+    text-align: center;
+    color: #777184;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #25213A;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #DDD5EB;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    color: #25213A;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #6D28D9;
+    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #AAA3B8;
+}
+
+/* Signup Button */
+.signup-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background-color: #6D28D9;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #351078;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #777184;
+}
+
+.login-link a {
+    color: #6D28D9;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    color: #1b1a1b;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .signup-container {
+        padding: 25px 15px;
+    }
+
+    .signup-form-section {
+        padding: 30px 22px;
+    }
+
+    .signup-form-section h2 {
+        font-size: 23px;
+    }
+}
