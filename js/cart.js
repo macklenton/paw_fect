@@ -43,22 +43,27 @@ function displayCart() {
       cardCart.appendChild(productQuantity);
       const checkoutButton = document.querySelector(".checkout-btn");
 
+      const removeCart = document.createElement("button");
+      removeCart.textContent = "Remove";
+      removeCart.style.backgroundColor = "red";
+      removeCart.style.color = "white"
+      removeCart;
+      removeCart.addEventListener("click", (event) => {
+        const currentUser = JSON.parse(localStorage.getItem("pawfectCurrentUser"));
 
-      const removeCart = document.createElement("button")
-      removeCart.textContent = "Remove"
-      removeCart.style.backgroundColor = "red"
-      removeCart
-      removeCart.addEventListener("click", (event)=>{
-        event.preventDefault()
-        const updateCart = cart.filter((cartItem) =>{
+        if (!currentUser) {
+          alert("Please login to manage your cart.");
+          window.location.href = "login.html";
+          return;
+        }
+        const updateCart = cart.filter((cartItem) => {
           return cartItem.id !== item.id;
         });
 
-        localStorage.setItem("pawfectCart", JSON.stringify(updateCart))
-        alert("Item has been removed")
+        localStorage.setItem("pawfectCart", JSON.stringify(updateCart));
+        alert("Item has been removed");
         window.location.reload();
-
-      })
+      });
       cardCart.appendChild(removeCart);
 
       checkoutButton.addEventListener("click", () => {
@@ -68,7 +73,9 @@ function displayCart() {
           alert("Your cart is empty. Please add products first.");
           return;
         }
-        const currentUser = JSON.parse(localStorage.getItem("pawfectCurrentUser"));
+        const currentUser = JSON.parse(
+          localStorage.getItem("pawfectCurrentUser"),
+        );
 
         if (!currentUser) {
           alert("Please login or create an account before checkout.");

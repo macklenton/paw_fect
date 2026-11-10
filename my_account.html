@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | PAWFECT</title>
+
+    <link rel="stylesheet" href="css/my_account.css">
+    <script src="js/my_account.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            
+            <h1><i class="fa-solid fa-paw"></i>
+                PAWFECT</h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="login.html">Login</a>
+            <a href="#" id="logout-link">Logout</a>
+            <a href="index.html#about">About Us</a>
+        </nav>
+
+    </header>
+
+    <main class="account-container">
+
+        <section class="account-welcome">
+            <h2>My Account</h2>
+            <p>Welcome back, <span id="customer-name">Customer</span>!</p>
+            <p>Manage your orders and favourite pet products.</p>
+        </section>
+
+        <section class="account-section">
+            <div class="section-heading">
+                <h2>My Orders</h2>
+                <p>Keep track of the products you've purchased.</p>
+            </div>
+
+            <div id="orders-list" class="orders-list">
+                
+            </div>
+        </section>
+
+        <section class="account-section">
+            <div class="section-heading">
+                <h2>My Wishlist</h2>
+                <p>Your favourite products saved for later.</p>
+            </div>
+
+            <div id="wishlist-products" class="wishlist-products">
+            
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
