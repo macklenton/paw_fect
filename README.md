@@ -156,7 +156,7 @@ The website will open in your default browser.
 
 **Live Website:**
 
-`YOUR_DEPLOYED_WEBSITE_URL`
+`https://macklenton.github.io/paw_fect/`
 
 ## Page Links
 
