@@ -76,7 +76,7 @@ function filterPet(product){
 // FILTER BY PRICE
 function filterPrice(product) {
     const selectedPrice = Array.from(priceFilters)
-        .find((price) => price.checked)?.value;
+        .find((price) => price.checked)?.value || "all";
 
     const productPrice = Number(product.dataset.price);
 
@@ -100,9 +100,9 @@ function filterPrice(product) {
 function filterAge(product) {
     const selectedAges = Array.from(ageFilters)
         .filter((age) => age.checked)
-        .map((age) => age.value);
+        .map((age) => age.value.toLowerCase());
 
-    const productAge = product.dataset.age;
+    const productAge = product.dataset.age.toLowerCase();
 
     if (selectedAges.length === 0) {
         return true;
@@ -114,8 +114,6 @@ function filterAge(product) {
 
     return selectedAges.includes(productAge);
 }
-
-
 // COMBINE ALL FILTERS
 function filterProducts() {
 
@@ -158,7 +156,30 @@ function filterProducts() {
     });
 
 }
+// APPLY FILTERS FROM HOMEPAGE URL
+function applyFilters() {
+    const params = new URLSearchParams(window.location.search);
 
+    const selectedPet = params.get("pet");
+    const selectedCategory = params.get("category");
+
+    
+    if (selectedPet) {
+        petFilters.forEach((pet) => {
+            pet.checked = pet.value === selectedPet;
+        });
+    }
+
+    
+    if (selectedCategory) {
+        categoryFilters.forEach((category) => {
+            category.checked = category.value === selectedCategory;
+        });
+    }
+
+    
+    filterProducts();
+}
 
 // EVENT LISTENERS
 
@@ -284,3 +305,4 @@ function openProductDetails() {
 }
 
 openProductDetails();
+applyFilters();

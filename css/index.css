@@ -134,9 +134,8 @@ header nav a:active {
     align-items: center;
 }
 
+/* SHOP BY PET */
 
-
-/* PET GRID*/
 .pet-shop {
     background-color: #FFFFFF;
 }
@@ -144,41 +143,45 @@ header nav a:active {
 .pet-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 25px;
+    gap: 22px;
 }
 
-.pet-grid  div {
+.pet-card,
+.category-card {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 20px 12px;
-    background-color: rgb(243, 232, 211);;
+    gap: 15px;
+    padding: 22px 12px;
+    background-color: #F8F5FF;
     border: 1px solid #E9D5FF;
     border-radius: 15px;
     color: #351078;
     font-size: 16px;
-    font-weight: bold;
-    text-align: center;
+    font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-.pet-grid > div:hover {
+.pet-card:hover,
+.category-card:hover {
     transform: translateY(-7px);
     background-color: #E9D5FF;
     box-shadow: 0 8px 18px rgba(109, 40, 217, 0.12);
 }
 
-.pet-grid img {
+.pet-card img,
+.category-card img {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-/* CATEGORY SECTION*/
+
+/* TOP CATEGORIES */
+
 .category-section {
     background-color: #F8F5FF;
 }
@@ -189,42 +192,91 @@ header nav a:active {
     gap: 22px;
 }
 
-.category-grid div {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 20px 12px;
-    background-color: rgb(243, 232, 211);
-    border: 1px solid #E9D5FF;
-    border-radius: 15px;
-    color: #351078;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s ease;
 
-}
-
-.category-grid div:hover {
-   transform: translateY(-7px);
-    background-color: #E9D5FF;
-    box-shadow: 0 8px 18px rgba(109, 40, 217, 0.12);
-}
-
-.category-grid img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    
-}
+/* BEST SELLERS */
 
 .best-sellers {
     background-color: #FFFFFF;
 }
+
+.section-description {
+    text-align: center;
+    color: #777184;
+    margin-top: -20px;
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background-color: #F8F5FF;
+    border: 1px solid #E9D5FF;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(53, 16, 120, 0.12);
+}
+
+.product-image {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    padding: 15px;
+    background-color: #FFFFFF;
+}
+
+.product-info {
+    padding: 18px;
+    text-align: center;
+}
+
+.product-info h3 {
+    color: #351078;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.product-category {
+    color: #777184;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #6D28D9;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.buy-now-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6D28D9;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.buy-now-btn:hover {
+    background-color: #351078;
+}
+
+
+
 
 .product-grid {
     display: grid;

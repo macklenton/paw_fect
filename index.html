@@ -9,14 +9,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     />
     <script src="js/index.js" defer></script>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header>
-      <div>        
+      <div>
         <h1>
-            <i class="fa-solid fa-paw"></i>
-            PAWFECT</h1>
+          <i class="fa-solid fa-paw"></i>
+          PAWFECT
+        </h1>
       </div>
       <div>
         <nav>
@@ -28,7 +29,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class=" hero-section" id="home">
+    <section class="hero-section" id="home">
       <div class="hero-content">
         <h2>Treat Your Pet</h2>
         <span> like royalty</span>
@@ -37,80 +38,113 @@
           moment feel special with royal treatment
         </p>
       </div>
-      
-       <button type="button" class="hero-button"> Shop Now</button>
 
-       
+      <button type="button" class="hero-button">Shop Now</button>
     </section>
 
+    <!-- SHOP BY PET -->
     <section class="pet-shop">
-        <h2> Shop By Pet</h2>
-        <div class="pet-grid">
-            <div> Dogs'
-                <img src="images/Dog1.webp" width="100" alt="Pet Dog">
-            </div>
-            <div>Cats
-                <img src="images/cat1.avif" width="100" alt="">
-            </div>
-            <div>Birds
-                <img src="images/bird1.jpg" width="100" alt="">
-            </div>
-            <div>Small Pets
-                <img src="images/hamster1.jpg" width="100" alt="">
-            </div>
-            <div>Fish
-                <img src="images/fish1.jpg" width="100" alt="">
-            </div>
-        </div>
-    </section>
-    <section class="category-section">
-        <h2> Top Categories</h2>
-        <div class="category-grid">
-            <div> Food
-                <img src="images/foodDog1.jpg" width="100" alt="">
-            </div>
-            <div>Toys
-                <img src="images/toy1.jpg" width="100" alt="">
-            </div>
-            <div>Beds
-                <img src="images/bed1.jpg" width="100" alt="">
-            </div>
-            <div>Veterinary Care
-                <img src="images/medic1.jpg" width="100" alt="">
-            </div>
-            <div> Pet Tech
-                <img src="images/tracker1.jpg" width="100" alt="">
-            </div>
-        </div>
-    </section>
-     <section class="best-sellers">
-        <h2> Best Sellers</h2>
-        <div class="product-grid">
-            
-        </div>
-        
-     </section>
+      <h2>Shop By Pet</h2>
 
-     <section class="why-section" id="about">
-        <h2> Why Pet Owners Love Us</h2>
-        <div class="benefits-grid">
-            <div> 
-                <i class="fa-sharp fa-solid fa-medal"></i>
-                High Quality</div>
-            <div> 
-                <i class="fa-solid fa-shield-halved"></i>
-                Trusted Brands</div>
-            <div>
-                <i class="fa-sharp fa-solid fa-star"></i>
-                Happy Customers
-            </div>
-            <div> 
-               <i class="fa-jelly-fill fa-regular fa-heart"></i>
-                Pet Lovers
-            </div>
+      <div class="pet-grid">
+        <button type="button" class="pet-card" data-pet-filter="dog">
+          <img src="images/Dog1.webp" alt="Dog" />
+          <span>Dogs</span>
+        </button>
+
+        <button type="button" class="pet-card" data-pet-filter="cat">
+          <img src="images/cat1.avif" alt="Cat" />
+          <span>Cats</span>
+        </button>
+
+        <button type="button" class="pet-card" data-pet-filter="bird">
+          <img src="images/bird1.jpg" alt="Bird" />
+          <span>Birds</span>
+        </button>
+
+        <button type="button" class="pet-card" data-pet-filter="small pet">
+          <img src="images/hamster1.jpg" alt="Small pet" />
+          <span>Small Pets</span>
+        </button>
+
+        <button type="button" class="pet-card" data-pet-filter="fish">
+          <img src="images/fish1.jpg" alt="Fish" />
+          <span>Fish</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- TOP CATEGORIES -->
+    <section class="category-section">
+      <h2>Top Categories</h2>
+
+      <div class="category-grid">
+        <button type="button" class="category-card" data-category-filter="food">
+          <img src="images/foodDog1.jpg" alt="Pet food" />
+          <span>Food</span>
+        </button>
+
+        <button type="button" class="category-card" data-category-filter="toys">
+          <img src="images/toy1.jpg" alt="Pet toys" />
+          <span>Toys</span>
+        </button>
+
+        <button type="button" class="category-card" data-category-filter="beds">
+          <img src="images/bed1.jpg" alt="Pet beds" />
+          <span>Beds</span>
+        </button>
+
+        <button
+          type="button"
+          class="category-card"
+          data-category-filter="grooming"
+        >
+          <img src="images/medic1.jpg" alt="Pet care" />
+          <span>Grooming & Care</span>
+        </button>
+
+        <button
+          type="button"
+          class="category-card"
+          data-category-filter="accessories"
+        >
+          <img src="images/tracker1.jpg" alt="Pet accessories" />
+          <span>Pet Accessories</span>
+        </button>
+      </div>
+    </section>
+    <section class="best-sellers">
+      <h2>Best Sellers</h2>
+
+      <p class="section-description">
+        Discover some of our favourite products for your pets.
+      </p>
+
+      <div class="product-grid">
+        
+      </div>
+    </section>
+    <section class="why-section" id="about">
+      <h2>Why Pet Owners Love Us</h2>
+      <div class="benefits-grid">
+        <div>
+          <i class="fa-sharp fa-solid fa-medal"></i>
+          High Quality
         </div>
-    
-     </section>
+        <div>
+          <i class="fa-solid fa-shield-halved"></i>
+          Trusted Brands
+        </div>
+        <div>
+          <i class="fa-sharp fa-solid fa-star"></i>
+          Happy Customers
+        </div>
+        <div>
+          <i class="fa-jelly-fill fa-regular fa-heart"></i>
+          Pet Lovers
+        </div>
+      </div>
+    </section>
     <section>
       <footer id="contact" class="footer">
         <div class="footer-socials">
