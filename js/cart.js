@@ -40,9 +40,26 @@ function displayCart() {
       const productQuantity = document.createElement("p");
       productQuantity.textContent = `Quantity: ${item.quantity}`;
       productQuantity.classList.add("cart-product-quantity");
-
       cardCart.appendChild(productQuantity);
       const checkoutButton = document.querySelector(".checkout-btn");
+
+
+      const removeCart = document.createElement("button")
+      removeCart.textContent = "Remove"
+      removeCart.style.backgroundColor = "red"
+      removeCart
+      removeCart.addEventListener("click", (event)=>{
+        event.preventDefault()
+        const updateCart = cart.filter((cartItem) =>{
+          return cartItem.id !== item.id;
+        });
+
+        localStorage.setItem("pawfectCart", JSON.stringify(updateCart))
+        alert("Item has been removed")
+        window.location.reload();
+
+      })
+      cardCart.appendChild(removeCart);
 
       checkoutButton.addEventListener("click", () => {
         const cartItems = JSON.parse(localStorage.getItem("pawfectCart")) || [];
