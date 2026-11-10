@@ -51,6 +51,13 @@ function displayCart() {
           alert("Your cart is empty. Please add products first.");
           return;
         }
+        const currentUser = JSON.parse(localStorage.getItem("pawfectCurrentUser"));
+
+        if (!currentUser) {
+          alert("Please login or create an account before checkout.");
+          window.location.href = "login.html";
+          return;
+        }
 
         window.location.href = "checkout.html";
       });
