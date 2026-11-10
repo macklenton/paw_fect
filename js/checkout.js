@@ -123,13 +123,12 @@ paymentCheckoutMethod();
 checkoutForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    // 1. Check whether the cart is empty
+
     if (cart.length === 0) {
         alert("Your cart is empty. Please add products before checkout.");
         return;
     }
 
-    // 2. Collect customer information
     const formData = new FormData(checkoutForm);
 
     const customerName = formData.get("fullName");
@@ -142,7 +141,7 @@ checkoutForm.addEventListener("submit", (event) => {
     const orderTotal = subtotalCalculation() + calculateDeliveryFee();
 
     //  Generate an order ID
-    const orderId = `PAW-${Date.now()}`;
+    const orderId = `PF-${Date.now()}`;
 
     // Create the order object
     const order = {

@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmation | PAWFECT</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/order_success.css">
+    <script src="js/order_success.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <i class="fa-solid fa-paw"></i>
+            PAWFECT
+        </h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+        </nav>
+    </header>
+
+    <main class="success-container">
+
+        <!-- Success Message -->
+        <section class="success-message">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h1>Thank You for Your Order!</h1>
+
+            <p>
+                Your order has been placed successfully.
+                We're getting your pet's goodies ready!
+            </p>
+
+            <div class="order-reference">
+                <span>Order Reference</span>
+                <strong id="order-id">Loading...</strong>
+            </div>
+
+        </section>
+
+        <!-- Purchased Products -->
+        <section class="order-details">
+
+            <h2>
+                <i class="fa-solid fa-box-open"></i>
+                Items Purchased
+            </h2>
+
+            <div id="purchased-items"></div>
+
+        </section>
+
+        <!-- Customer Information -->
+        <section class="customer-information">
+
+            <h2>
+                <i class="fa-solid fa-user"></i>
+                Delivery Information
+            </h2>
+
+            <div class="information-grid">
+                <div>
+                    <span>Customer Name</span>
+                    <strong id="customer-name"></strong>
+                </div>
+
+                <div>
+                    <span>Email Address</span>
+                    <strong id="customer-email"></strong>
+                </div>
+
+                <div>
+                    <span>Phone Number</span>
+                    <strong id="customer-phone"></strong>
+                </div>
+
+                <div>
+                    <span>Payment Method</span>
+                    <strong id="payment-method"></strong>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Order Summary -->
+        <section class="order-total">
+
+            <h2>Order Summary</h2>
+
+            <div class="total-row">
+                <span>Subtotal</span>
+                <strong id="order-subtotal"></strong>
+            </div>
+
+            <div class="total-row">
+                <span>Delivery Fee</span>
+                <strong id="order-delivery"></strong>
+            </div>
+
+            <div class="total-row grand-total">
+                <span>Total Paid / Due</span>
+                <strong id="order-total"></strong>
+            </div>
+
+            <p id="payment-note"></p>
+
+        </section>
+
+        <!-- Continue Shopping -->
+        <div class="success-actions">
+
+            <a href="shop.html" class="continue-btn">
+                Continue Shopping
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="index.html" class="home-btn">
+                Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
