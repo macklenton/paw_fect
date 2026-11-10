@@ -163,31 +163,31 @@ The website will open in your default browser.
 Here are the main pages available in PAWFECT:
 
 ### Home Page
-`index.html`
+`https://macklenton.github.io/paw_fect/index.html`
 
 ### Shop Page
-`shop.html`
+`https://macklenton.github.io/paw_fect/shop.html`
 
 ### Product Details Page
-`product.html`
+`https://macklenton.github.io/paw_fect/product.html`
 
 ### Shopping Cart Page
-`cart.html`
+`https://macklenton.github.io/paw_fect/cart.html`
 
 ### Checkout Page
-`checkout.html`
+`https://macklenton.github.io/paw_fect/checkout.html`
 
 ### Order Confirmation Page
-`order_success.html`
+`https://macklenton.github.io/paw_fect/order_success.html`
 
 ### Sign Up Page
-`signup.html`
+`https://macklenton.github.io/paw_fect/signup.html`
 
 ### Login Page
-`login.html`
+`https://macklenton.github.io/paw_fect/login.html`
 
 ### My Account Page
-`my_account.html`
+`https://macklenton.github.io/paw_fect/my_account.html`
 
 ## Design Styling
 
