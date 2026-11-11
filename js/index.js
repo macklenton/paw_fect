@@ -23,11 +23,11 @@ const bestSellerProducts = [
         pet: "Cat"
     },
     {
-        id: "home-pet-tracker",
-        name: "Pet Tracker",
+        id: "food-dog",
+        name: "Dog food",
         price: 1500,
-        image: "images/tracker1.jpg",
-        category: "Accessories",
+        image: "images/foodDog2.avif",
+        category: "Food",
         pet: "Dog"
     },
     {
