@@ -265,5 +265,3 @@ Possible future development includes:
 **Macklenton**
 
 PAWFECT is a personal learning project created to practise front-end web development, JavaScript programming, and UI/UX design while developing an interactive online pet store concept.
-
-**PAWFECT – Shop Happy. Pets Happy.** 🐾
